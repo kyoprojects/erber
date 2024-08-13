@@ -1,5 +1,3 @@
-// init
-
 function loadScript(src) {
   return new Promise((resolve, reject) => {
     const script = document.createElement("script");
@@ -21,7 +19,7 @@ function loadCSS(href) {
   });
 }
 
-loadCSS("http://localhost:8000/erber/erber.css");
+loadCSS("https://kyoprojects.github.io/erber/erber.css");
 
 Promise.all([
   loadScript("https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"),
