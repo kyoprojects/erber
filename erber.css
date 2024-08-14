@@ -26,3 +26,7 @@
   word-break: normal !important;
   word-wrap: normal !important;
 }
+
+.wally-main-item:first-of-type {
+  display: none;
+}
