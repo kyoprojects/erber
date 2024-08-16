@@ -171,15 +171,13 @@ function initAnimations() {
   setTimeout(() => {
     const iframe = document.getElementById("iFrameResizer0");
 
-    // Access the iframe's document
     const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
 
-    // Create a <style> element
     const style = document.createElement("style");
     style.type = "text/css";
     style.innerHTML = ".wally-main-item { display: none !important; }";
 
-    // Append the <style> element to the iframe's document head
     iframeDoc.head.appendChild(style);
+    console.log("iframeDoc", iframeDoc);
   }, 3000);
 }
