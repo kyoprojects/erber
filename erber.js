@@ -168,7 +168,6 @@ function initAnimations() {
     y: 50, // Move items from 50px below their original position
     stagger: 0.15, // Stagger each item by 0.2 seconds
     duration: 0.4, // Animation duration
-    markers: true,
   });
 
   setTimeout(() => {
