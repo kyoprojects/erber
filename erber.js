@@ -168,16 +168,16 @@ function initAnimations() {
     duration: 0.4,
   });
 
-  setTimeout(() => {
-    const iframe = document.getElementById("iFrameResizer0");
+  // setTimeout(() => {
+  //   const iframe = document.getElementById("iFrameResizer0");
 
-    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+  //   const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
 
-    const style = document.createElement("style");
-    style.type = "text/css";
-    style.innerHTML = ".wally-main-item { display: none !important; }";
+  //   const style = document.createElement("style");
+  //   style.type = "text/css";
+  //   style.innerHTML = ".wally-main-item { display: none !important; }";
 
-    iframeDoc.head.appendChild(style);
-    console.log("iframeDoc", iframeDoc);
-  }, 3000);
+  //   iframeDoc.head.appendChild(style);
+  //   console.log("iframeDoc", iframeDoc);
+  // }, 3000);
 }
