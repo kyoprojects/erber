@@ -30,7 +30,7 @@ Promise.all([
 ])
   .then(() => {
     console.log("All scripts loaded");
-    // initAnimations();
+    initAnimations();
   })
   .catch((error) => {
     console.error("Error loading scripts:", error);
