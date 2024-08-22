@@ -186,10 +186,14 @@ function initAnimations() {
 
   // full-screen menu animation
   let menuCircle = document.querySelector('[data-framer-name="menu-circle"]');
+
+  // Ensure the element can resize properly
+  menuCircle.style.position = "absolute";
+  menuCircle.style.boxSizing = "border-box";
+
   // event listener
   menuCircle.addEventListener("click", () => {
     console.log("menu clicked");
-    // gsap.to(".framer-1jbc6qn", { duration: 0.3, y: 0, autoAlpha: 1 });
     gsap.to(menuCircle, {
       duration: 0.3,
       width: "100vw",
