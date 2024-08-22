@@ -188,6 +188,7 @@ function initAnimations() {
   let menuCircle = document.querySelector('[data-framer-name="menu-circle"]');
   // event listener
   menuCircle.addEventListener("click", () => {
+    console.log("menu clicked");
     // gsap.to(".framer-1jbc6qn", { duration: 0.3, y: 0, autoAlpha: 1 });
     gsap.to(".framer-1jbc6qn", {
       duration: 0.3,
