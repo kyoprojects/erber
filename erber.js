@@ -182,5 +182,18 @@ function initAnimations() {
 
   //   iframeDoc.head.appendChild(style);
   //   console.log("iframeDoc", iframeDoc);
-  // }, 3000);
+  // }, 3000);\
+
+  // full-screen menu animation
+  let menuCircle = document.querySelector('[data-framer-name="menu-circle"]');
+  // event listener
+  menuCircle.addEventListener("click", () => {
+    // gsap.to(".framer-1jbc6qn", { duration: 0.3, y: 0, autoAlpha: 1 });
+    gsap.to(".framer-1jbc6qn", {
+      duration: 0.3,
+      width: "100vw",
+      height: "100vh",
+      autoAlpha: 1,
+    });
+  });
 }
