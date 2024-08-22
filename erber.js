@@ -51,7 +51,8 @@ function initAnimations() {
   gsap.registerPlugin(ScrollTrigger);
 
   // header
-  let targetElement = document.querySelector(".framer-1jbc6qn");
+  // let targetElement = document.querySelector(".framer-1jbc6qn");
+  let targetElement = document.querySelector('[data-framer-name=header-wrap"]');
   gsap.to(targetElement, { duration: 0.3, y: -80, autoAlpha: 0 });
   let lastScrollTop = 0;
   let threshold = 100;
