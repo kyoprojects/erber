@@ -190,7 +190,7 @@ function initAnimations() {
   menuCircle.addEventListener("click", () => {
     console.log("menu clicked");
     // gsap.to(".framer-1jbc6qn", { duration: 0.3, y: 0, autoAlpha: 1 });
-    gsap.to(".framer-1jbc6qn", {
+    gsap.to("menuCircle", {
       duration: 0.3,
       width: "100vw",
       height: "100vh",
