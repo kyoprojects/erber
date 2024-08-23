@@ -225,7 +225,7 @@ function initAnimations() {
         menuOpenState = false;
       } else {
         console.log("open menu");
-        tl.to(menuPseudo, { duration: 0, autoAlpha: 1 }, "-=0.6")
+        tl.to(menuPseudo, { duration: 0, autoAlpha: 1 })
           .to(menuPseudo, { duration: 0, autoAlpha: 1 })
           .to(menuCircle, {
             duration: 0.6,
