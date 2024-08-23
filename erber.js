@@ -256,7 +256,7 @@ if (baseUrls.some((baseUrl) => url.includes(baseUrl))) {
                 y: "0",
                 autoAlpha: 1,
                 stagger: 0.1,
-                ease: "expoScale(0.5,7,none)",
+                ease: "power4.inOut",
               },
               "-=0.5"
             );
