@@ -223,7 +223,7 @@ function initAnimations() {
         gsap.to(menuCircle, {
           duration: 1,
           width: "300vw",
-          height: "300vh",
+          height: "300vw",
           autoAlpha: 1,
           ease: "power2.inOut",
         });
