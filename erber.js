@@ -186,19 +186,24 @@ function initAnimations() {
 
   // full-screen menu animation
   let menuCircle = document.querySelector('[data-framer-name="menu-circle"]');
+  let menuToggle = document.querySelectorAll(
+    '[data-framer-name="menu-toggle"]'
+  );
 
   // Ensure the element can resize properly
   menuCircle.style.position = "absolute";
   menuCircle.style.boxSizing = "border-box";
 
-  // event listener
-  menuCircle.addEventListener("click", () => {
-    console.log("menu clicked");
-    gsap.to(menuCircle, {
-      duration: 0.3,
-      width: "100vw",
-      height: "100vh",
-      autoAlpha: 1,
+  // menu toggle event listener
+  menuToggle.forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      console.log("menu clicked");
+      gsap.to(menuCircle, {
+        duration: 0.3,
+        width: "300vw",
+        height: "300vh",
+        autoAlpha: 1,
+      });
     });
   });
 }
