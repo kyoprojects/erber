@@ -227,7 +227,7 @@ function initAnimations() {
       } else {
         console.log("open menu");
         tl.to(menuPseudo, { duration: 0, autoAlpha: 1 })
-          .to(menuContainer, { duration: 0, autoAlpha: 1 }, "-=0.6")
+          .to(menuContainer, { duration: 0, autoAlpha: 1 })
           .to(
             menuCircle,
             {
