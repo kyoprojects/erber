@@ -225,13 +225,15 @@ function initAnimations() {
         menuOpenState = false;
       } else {
         console.log("open menu");
-        tl.to(menuPseudo, { duration: 0, autoAlpha: 1 }).to(menuCircle, {
-          duration: 0.6,
-          width: "300vw",
-          height: "300vw",
-          autoAlpha: 1,
-          ease: "power2.inOut",
-        });
+        tl.to(menuPseudo, { duration: 0, autoAlpha: 1 }, "-=0.6")
+          .to(menuPseudo, { duration: 0, autoAlpha: 1 })
+          .to(menuCircle, {
+            duration: 0.6,
+            width: "300vw",
+            height: "300vw",
+            autoAlpha: 1,
+            ease: "power2.inOut",
+          });
         // .to(menuContainer, { duration: 0, autoAlpha: 1 }, "-=0.6");
         menuOpenState = true;
       }
