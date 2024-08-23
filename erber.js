@@ -192,10 +192,12 @@ function initAnimations() {
   let menuPseudo = document.querySelectorAll(
     '[data-framer-name="menu-pseudo"]'
   );
+  let menuContainer = document.querySelector('[data-framer-name="menu"]');
 
   let menuOpenState = false;
 
   gsap.set(menuPseudo, { autoAlpha: 0 });
+  gsap.set(menuContainer, { autoAlpha: 0 });
 
   // Ensure the element can resize properly
   menuCircle.style.position = "absolute";
@@ -216,10 +218,12 @@ function initAnimations() {
           ease: "power2.inOut",
         });
         gsap.to(menuPseudo, { duration: 0, autoAlpha: 0 });
+        gsap.to(menuContainer, { duration: 0, autoAlpha: 0 });
         menuOpenState = false;
       } else {
         console.log("open menu");
         gsap.to(menuPseudo, { duration: 0, autoAlpha: 1 });
+        gsap.to(menuContainer, { duration: 0, autoAlpha: 1 });
         gsap.to(menuCircle, {
           duration: 0.6,
           width: "300vw",
