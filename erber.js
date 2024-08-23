@@ -256,9 +256,9 @@ if (baseUrls.some((baseUrl) => url.includes(baseUrl))) {
                 y: "0",
                 autoAlpha: 1,
                 stagger: 0.1,
-                ease: "power3.inOut",
+                ease: "power4.out",
               },
-              "-=0.3"
+              "-=0.5"
             );
           menuOpenState = true;
         }
