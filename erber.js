@@ -210,21 +210,22 @@ function initAnimations() {
 
       if (menuOpenState) {
         console.log("close menu");
-        gsap.to(menuCircle, {
+        tl.to(menuCircle, {
           duration: 0.6,
           width: "0",
           height: "0",
           autoAlpha: 0,
           ease: "power2.inOut",
         });
-        gsap.to(menuPseudo, { duration: 0, autoAlpha: 0 });
-        gsap.to(menuContainer, { duration: 0, autoAlpha: 0 });
+        tl.to(menuContainer, { duration: 0, autoAlpha: 0 });
+        tl.to(menuPseudo, { duration: 0, autoAlpha: 0 });
         menuOpenState = false;
+        return;
       } else {
         console.log("open menu");
-        gsap.to(menuPseudo, { duration: 0, autoAlpha: 1 });
-        gsap.to(menuContainer, { duration: 0, autoAlpha: 1 });
-        gsap.to(menuCircle, {
+        tl.to(menuPseudo, { duration: 0, autoAlpha: 1 });
+        tl.to(menuContainer, { duration: 0, autoAlpha: 1 });
+        tl.to(menuCircle, {
           duration: 0.6,
           width: "300vw",
           height: "300vw",
@@ -232,6 +233,7 @@ function initAnimations() {
           ease: "power2.inOut",
         });
         menuOpenState = true;
+        return;
       }
     });
   });
