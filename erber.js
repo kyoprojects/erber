@@ -209,7 +209,7 @@ function initAnimations() {
       if (menuOpenState) {
         console.log("close menu");
         gsap.to(menuCircle, {
-          duration: 1,
+          duration: 0.6,
           width: "0",
           height: "0",
           autoAlpha: 0,
@@ -221,7 +221,7 @@ function initAnimations() {
         console.log("open menu");
         gsap.to(menuPseudo, { duration: 0, autoAlpha: 1 });
         gsap.to(menuCircle, {
-          duration: 1,
+          duration: 0.6,
           width: "300vw",
           height: "300vw",
           autoAlpha: 1,
