@@ -189,7 +189,7 @@ function initAnimations() {
 
   // Ensure the element can resize properly
   menuCircle.style.position = "absolute";
-  menuCircle.style.boxSizing = "border-box";
+  // menuCircle.style.boxSizing = "border-box";
 
   // event listener
   menuCircle.addEventListener("click", () => {
