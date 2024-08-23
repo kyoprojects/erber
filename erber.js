@@ -1,5 +1,3 @@
-// get page url and check if it includes the base urls https://aquamarine-autonomy-753641.framer.app/ or https://erber.framer.ai/
-
 const url = window.location.href;
 const baseUrls = ["aquamarine-autonomy-753641.framer.app/", "erber.framer.ai/"];
 
