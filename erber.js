@@ -214,7 +214,7 @@ function initAnimations() {
 
       if (menuOpenState) {
         console.log("close menu");
-        tl.to(menuContainer, { duration: 0, autoAlpha: 0 });
+        tl.to(menuContainer, { duration: 0.2, autoAlpha: 0 });
         tl.to(menuCircle, {
           duration: 0.6,
           width: "0",
@@ -233,7 +233,7 @@ function initAnimations() {
             autoAlpha: 1,
             ease: "power2.inOut",
           })
-          .to(menuContainer, { duration: 0, autoAlpha: 1 });
+          .to(menuContainer, { duration: 0.2, autoAlpha: 1 });
         menuOpenState = true;
       }
     });
