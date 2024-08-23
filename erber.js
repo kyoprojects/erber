@@ -213,18 +213,20 @@ function initAnimations() {
           width: "0",
           height: "0",
           autoAlpha: 0,
+          ease: "power2.inOut",
         });
-        gsap.to(menuPseudo, { duration: 0.3, autoAlpha: 0 });
+        gsap.to(menuPseudo, { duration: 0, autoAlpha: 0 });
         menuOpenState = false;
       } else {
         console.log("open menu");
+        gsap.to(menuPseudo, { duration: 0, autoAlpha: 1 });
         gsap.to(menuCircle, {
           duration: 0.3,
           width: "300vw",
           height: "300vh",
           autoAlpha: 1,
+          ease: "power2.inOut",
         });
-        gsap.to(menuPseudo, { duration: 0.3, autoAlpha: 1 });
         menuOpenState = true;
       }
     });
