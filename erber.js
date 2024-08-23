@@ -200,6 +200,7 @@ function initAnimations() {
 
   gsap.set(menuPseudo, { autoAlpha: 0 });
   gsap.set(menuContainer, { autoAlpha: 0 });
+  gsap.set(menuCircle, { backgroundColor: "rgba(0, 0, 0, 0.0)" });
 
   // Ensure the element can resize properly
   menuCircle.style.position = "absolute";
