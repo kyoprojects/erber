@@ -214,14 +214,14 @@ function initAnimations() {
 
       if (menuOpenState) {
         console.log("close menu");
-        tl.to(menuCircle, {
-          duration: 0.6,
-          width: "0",
-          height: "0",
-          autoAlpha: 0,
-          ease: "power2.inOut",
-        })
-          .to(menuContainer, { duration: 0, autoAlpha: 0 }, "-=0.6")
+        tl.to(menuContainer, { duration: 0, autoAlpha: 0 }, "-=0.6")
+          .to(menuCircle, {
+            duration: 0.6,
+            width: "0",
+            height: "0",
+            autoAlpha: 0,
+            ease: "power2.inOut",
+          })
           .to(menuPseudo, { duration: 0, autoAlpha: 0 }, "-=0.6");
         menuOpenState = false;
       } else {
