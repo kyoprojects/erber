@@ -233,7 +233,7 @@ function initAnimations() {
             autoAlpha: 1,
             ease: "power2.inOut",
           })
-          .to(menuContainer, { duration: 0.2, autoAlpha: 1 });
+          .to(menuContainer, { duration: 0.2, autoAlpha: 1 }, "-=0.2");
         menuOpenState = true;
       }
     });
