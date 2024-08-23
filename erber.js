@@ -251,7 +251,13 @@ if (baseUrls.some((baseUrl) => url.includes(baseUrl))) {
             .fromTo(
               menuColumns,
               { y: "-100px", autoAlpha: 0 },
-              { duration: 0.15, y: "0", autoAlpha: 1, stagger: 0.1 }
+              {
+                duration: 0.15,
+                y: "0",
+                autoAlpha: 1,
+                stagger: 0.1,
+                ease: "power2.inOut",
+              }
             );
           menuOpenState = true;
         }
