@@ -250,9 +250,9 @@ if (baseUrls.some((baseUrl) => url.includes(baseUrl))) {
             // .to(menuColumns, { duration: 0.4, autoAlpha: 1, stagger: 0.1 }); nahh i need a fromTo also moving from top to bottom
             .fromTo(
               menuColumns,
-              { y: "-100px", autoAlpha: 0 },
+              { y: "-40px", autoAlpha: 0 },
               {
-                duration: 0.15,
+                duration: 0.25,
                 y: "0",
                 autoAlpha: 1,
                 stagger: 0.1,
