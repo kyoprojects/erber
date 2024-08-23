@@ -201,6 +201,9 @@ if (baseUrls.some((baseUrl) => url.includes(baseUrl))) {
     let menuContainer = document.querySelector(
       '[data-framer-name="menu-container"]'
     );
+    let menuColumns = document.querySelectorAll(
+      '[data-framer-name="menu-column"]'
+    );
 
     let menuOpenState = false;
 
@@ -211,6 +214,7 @@ if (baseUrls.some((baseUrl) => url.includes(baseUrl))) {
     // Ensure the element can resize properly
     menuCircle.style.position = "absolute";
     menuCircle.style.boxSizing = "border-box";
+    menuColumns.forEach((column) => gsap.set(column, { autoAlpha: 0 }));
 
     /// menu toggle event listener
     menuToggle.forEach((toggle) => {
@@ -244,7 +248,13 @@ if (baseUrls.some((baseUrl) => url.includes(baseUrl))) {
               autoAlpha: 1,
               ease: "power2.inOut",
             })
-            .to(menuContainer, { duration: 0.2, autoAlpha: 1 }, "-=0.3");
+            .to(menuContainer, { duration: 0.2, autoAlpha: 1 }, "-=0.3")
+            // .to(menuColumns, { duration: 0.4, autoAlpha: 1, stagger: 0.1 }); nahh i need a fromTo also moving from top to bottom
+            .fromTo(
+              menuColumns,
+              { y: "-100px", autoAlpha: 0 },
+              { duration: 0.4, y: "0", autoAlpha: 1, stagger: 0.1 }
+            );
           menuOpenState = true;
         }
       });
