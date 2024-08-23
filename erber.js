@@ -192,7 +192,9 @@ function initAnimations() {
   let menuPseudo = document.querySelectorAll(
     '[data-framer-name="menu-pseudo"]'
   );
-  let menuContainer = document.querySelector('[data-framer-name="menu"]');
+  let menuContainer = document.querySelector(
+    '[data-framer-name="menu-container"]'
+  );
 
   let menuOpenState = false;
 
