@@ -1,7 +1,7 @@
-const url = window.location.href;
+const currentUrl = window.location.href;
 const baseUrls = ["aquamarine-autonomy-753641.framer.app/", "erber.framer.ai/"];
 
-if (baseUrls.some((baseUrl) => url.includes(baseUrl))) {
+if (baseUrls.some((baseUrl) => currentUrl.includes(baseUrl))) {
   function loadScript(src) {
     return new Promise((resolve, reject) => {
       const script = document.createElement("script");
