@@ -239,6 +239,7 @@ if (baseUrls.some((baseUrl) => url.includes(baseUrl))) {
         } else {
           console.log("open menu");
           tl.to(menuPseudo, { duration: 0, autoAlpha: 1 })
+            .to(menuContainer, { duration: 0.0, autoAlpha: 1 })
             .to(menuCircle, {
               duration: 0.6,
               width: "250vw",
@@ -246,7 +247,6 @@ if (baseUrls.some((baseUrl) => url.includes(baseUrl))) {
               autoAlpha: 1,
               ease: "power2.inOut",
             })
-            .to(menuContainer, { duration: 0.15, autoAlpha: 1 }, "-=0.3")
             // .to(menuColumns, { duration: 0.4, autoAlpha: 1, stagger: 0.1 }); nahh i need a fromTo also moving from top to bottom
             .fromTo(
               menuColumns,
@@ -256,8 +256,9 @@ if (baseUrls.some((baseUrl) => url.includes(baseUrl))) {
                 y: "0",
                 autoAlpha: 1,
                 stagger: 0.1,
-                ease: "power2.inOut",
-              }
+                ease: "power3.inOut",
+              },
+              "-=0.3"
             );
           menuOpenState = true;
         }
