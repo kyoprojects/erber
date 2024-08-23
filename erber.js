@@ -233,8 +233,8 @@ function initAnimations() {
             height: "300vw",
             autoAlpha: 1,
             ease: "power2.inOut",
-          });
-        .to(menuContainer, { duration: 0, autoAlpha: 1 }, "-=0.6");
+          })
+          .to(menuContainer, { duration: 0, autoAlpha: 1 }, "-=0.6");
         menuOpenState = true;
       }
     });
