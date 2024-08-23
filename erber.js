@@ -233,8 +233,8 @@ function initAnimations() {
         tl.to(menuPseudo, { duration: 0, autoAlpha: 1 })
           .to(menuCircle, {
             duration: 0.6,
-            width: "300vw",
-            height: "300vw",
+            width: "200vw",
+            height: "200vw",
             autoAlpha: 1,
             ease: "power2.inOut",
           })
