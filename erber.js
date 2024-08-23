@@ -252,7 +252,7 @@ if (baseUrls.some((baseUrl) => url.includes(baseUrl))) {
               menuColumns,
               { y: "-80px", autoAlpha: 0 },
               {
-                duration: 2,
+                duration: 0.8,
                 y: "0",
                 autoAlpha: 1,
                 stagger: 0.1,
