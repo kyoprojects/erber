@@ -246,12 +246,12 @@ if (baseUrls.some((baseUrl) => url.includes(baseUrl))) {
               autoAlpha: 1,
               ease: "power2.inOut",
             })
-            .to(menuContainer, { duration: 0.2, autoAlpha: 1 }, "-=0.3")
+            .to(menuContainer, { duration: 0.15, autoAlpha: 1 }, "-=0.3")
             // .to(menuColumns, { duration: 0.4, autoAlpha: 1, stagger: 0.1 }); nahh i need a fromTo also moving from top to bottom
             .fromTo(
               menuColumns,
               { y: "-100px", autoAlpha: 0 },
-              { duration: 0.4, y: "0", autoAlpha: 1, stagger: 0.1 }
+              { duration: 0.15, y: "0", autoAlpha: 1, stagger: 0.1 }
             );
           menuOpenState = true;
         }
