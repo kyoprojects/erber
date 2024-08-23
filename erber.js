@@ -189,6 +189,13 @@ function initAnimations() {
   let menuToggle = document.querySelectorAll(
     '[data-framer-name="menu-toggle"]'
   );
+  let menuPseudo = document.querySelectorAll(
+    '[data-framer-name="menu-pseudo"]'
+  );
+
+  let menuOpenState = false;
+
+  gsap.set(menuPseudo, { autoAlpha: 0 });
 
   // Ensure the element can resize properly
   menuCircle.style.position = "absolute";
@@ -198,12 +205,28 @@ function initAnimations() {
   menuToggle.forEach((toggle) => {
     toggle.addEventListener("click", () => {
       console.log("menu clicked");
-      gsap.to(menuCircle, {
-        duration: 0.3,
-        width: "300vw",
-        height: "300vh",
-        autoAlpha: 1,
-      });
+
+      if (menuOpenState) {
+        console.log("close menu");
+        gsap.to(menuCircle, {
+          duration: 0.3,
+          width: "0",
+          height: "0",
+          autoAlpha: 0,
+        });
+        gsap.to(menuPseudo, { duration: 0.3, autoAlpha: 0 });
+        menuOpenState = false;
+      } else {
+        console.log("open menu");
+        gsap.to(menuCircle, {
+          duration: 0.3,
+          width: "300vw",
+          height: "300vh",
+          autoAlpha: 1,
+        });
+        gsap.to(menuPseudo, { duration: 0.3, autoAlpha: 1 });
+        menuOpenState = true;
+      }
     });
   });
 }
