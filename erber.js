@@ -203,10 +203,12 @@ function initAnimations() {
   menuCircle.style.position = "absolute";
   menuCircle.style.boxSizing = "border-box";
 
-  // menu toggle event listener
+  /// menu toggle event listener
   menuToggle.forEach((toggle) => {
     toggle.addEventListener("click", () => {
       console.log("menu clicked");
+
+      const tl = gsap.timeline();
 
       if (menuOpenState) {
         console.log("close menu");
@@ -216,24 +218,26 @@ function initAnimations() {
           height: "0",
           autoAlpha: 0,
           ease: "power2.inOut",
-        });
-        tl.to(menuContainer, { duration: 0, autoAlpha: 0 });
-        tl.to(menuPseudo, { duration: 0, autoAlpha: 0 });
+        })
+          .to(menuContainer, { duration: 0, autoAlpha: 0 }, "-=0.6")
+          .to(menuPseudo, { duration: 0, autoAlpha: 0 }, "-=0.6");
         menuOpenState = false;
-        return;
       } else {
         console.log("open menu");
-        tl.to(menuPseudo, { duration: 0, autoAlpha: 1 });
-        tl.to(menuContainer, { duration: 0, autoAlpha: 1 });
-        tl.to(menuCircle, {
-          duration: 0.6,
-          width: "300vw",
-          height: "300vw",
-          autoAlpha: 1,
-          ease: "power2.inOut",
-        });
+        tl.to(menuPseudo, { duration: 0, autoAlpha: 1 })
+          .to(menuContainer, { duration: 0, autoAlpha: 1 }, "-=0.6")
+          .to(
+            menuCircle,
+            {
+              duration: 0.6,
+              width: "300vw",
+              height: "300vw",
+              autoAlpha: 1,
+              ease: "power2.inOut",
+            },
+            "-=0.6"
+          );
         menuOpenState = true;
-        return;
       }
     });
   });
