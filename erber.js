@@ -27,7 +27,8 @@ if (typeof currentUrl === 'undefined') {
       loadScript('https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js'),
       loadScript('https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js'),
       loadScript('https://unpkg.com/lenis@1.1.5/dist/lenis.min.js'),
-      loadScript('https://unpkg.com/split-type')
+      loadScript('https://unpkg.com/split-type'),
+      loadScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js')
     ])
       .then(() => {
         console.log('All scripts loaded');
