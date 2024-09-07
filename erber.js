@@ -22,7 +22,7 @@ if (!currentUrl) {
       });
     }
 
-    loadCSS('https://kyoprojects.github.io/erber/erber.css');
+    // loadCSS('https://kyoprojects.github.io/erber/erber.css');
 
     Promise.all([
       loadScript('https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js'),
