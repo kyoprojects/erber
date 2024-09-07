@@ -245,6 +245,36 @@ if (typeof currentUrl === 'undefined') {
         }
       });
     });
+
+    // swiper slider
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      allowTouchMove: true,
+      centeredSlides: true,
+      speed: 300,
+      scrollbar: { el: '.swiper-scrollbar', draggable: true },
+      // freeMode: true,
+      // slideToClickedSlide: true,
+      on: {
+        click: swiper => {
+          if (swiper.clickedIndex > swiper.activeIndex) {
+            swiper.slideNext();
+          } else {
+            swiper.slidePrev();
+          }
+        }
+      },
+      navigation: { nextEl: '.swiper-btn-next', prevEl: '.swiper-btn-prev' },
+      breakpoints: {
+        // when window width is >= 320px
+        400: {
+          slidesPerView: 3
+        }
+      }
+    });
+
+    ///
   }
-  ///
 }
