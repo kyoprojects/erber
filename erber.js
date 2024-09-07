@@ -1,5 +1,6 @@
+let currentUrl;
 if (!currentUrl) {
-  const currentUrl = window.location.href;
+  currentUrl = window.location.href;
   const baseUrls = ['aquamarine-autonomy-753641.framer.app/', 'erber.framer.ai/'];
 
   if (baseUrls.some(baseUrl => currentUrl.includes(baseUrl))) {
