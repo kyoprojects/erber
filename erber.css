@@ -1,5 +1,5 @@
 .framer--slideshow-controls button {
-  background-color: transparent;
+  background-color: transparent !important;
   border: 1px solid #000;
   height: 70px;
   width: 70px;
