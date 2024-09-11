@@ -4,6 +4,13 @@
   height: 70px;
   width: 70px;
   padding: 5 5 5 5 !important;
+  opacity: 0.8 !important;
+}
+
+.framer--slideshow-controls button img {
+  height: 36px !important;
+  width: 36px !important;
+  opacity: 0.5 !important;
 }
 
 .line {
