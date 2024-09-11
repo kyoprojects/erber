@@ -136,7 +136,9 @@ if (typeof currentUrl === 'undefined') {
 
     // carrousel
     const carouselItems = document.querySelectorAll('.framer--carousel li');
-    gsap.from(carouselItems, {
+    const newCarouselItems = document.querySelectorAll('.framer-1mn2z7u-container li > div');
+
+    gsap.from(newCarouselItems, {
       scrollTrigger: {
         trigger: '.framer--carousel',
         start: 'center bottom',
