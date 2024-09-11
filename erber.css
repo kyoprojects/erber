@@ -1,9 +1,11 @@
 .framer--slideshow-controls button {
   background-color: transparent !important;
   border: 2px solid #b3b3b3 !important;
-  height: 70px;
-  width: 70px;
+  height: 80px;
+  width: 80px;
   padding: 5 5 5 5 !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .framer--slideshow-controls button img {
