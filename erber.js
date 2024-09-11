@@ -136,7 +136,7 @@ if (typeof currentUrl === 'undefined') {
 
     // carrousel
     const carouselItems = document.querySelectorAll('.framer--carousel li');
-    const newCarouselItems = document.querySelectorAll('.framer-1mn2z7u-container li');
+    const newCarouselItems = document.querySelectorAll('[data-framer-name="Card1"]');
     console.log('carouselItems', carouselItems);
 
     gsap.from(newCarouselItems, {
