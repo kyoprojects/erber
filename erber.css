@@ -1,3 +1,11 @@
+.framer--slideshow-controls button {
+  background-color: transparent;
+  border: 1px solid #000;
+  height: 70px;
+  width: 70px;
+  padding: 5px;
+}
+
 .line {
   position: relative;
 }
@@ -22,7 +30,7 @@
     overflow: visible !important;
     } */
 
-[data-framer-name="hero-text"] {
+[data-framer-name='hero-text'] {
   word-break: normal !important;
   word-wrap: normal !important;
 }
