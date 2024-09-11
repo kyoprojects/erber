@@ -136,12 +136,12 @@ if (typeof currentUrl === 'undefined') {
 
     // carrousel
     const carouselItems = document.querySelectorAll('.framer--carousel li');
-    const newCarouselItems = document.querySelectorAll('[name="Card1"]');
+    const newCarouselItems = document.querySelectorAll('[data-framer-name="section2-stagger"]');
     console.log('carouselItems', newCarouselItems);
 
     gsap.from(newCarouselItems, {
       scrollTrigger: {
-        trigger: '.framer-1mn2z7u-container',
+        trigger: newCarouselItems,
         start: 'center bottom',
         end: 'bottom center'
         // scrub: true
