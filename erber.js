@@ -135,16 +135,16 @@ if (typeof currentUrl === 'undefined') {
       .fromTo('.framer-ahrhkz', { y: '0' }, { y: '150px' }, '<');
 
     // carrousel
+    const secondSectionWrap = document.querySelector('[data-framer-name="second-section-wrap"]');
     const carouselItems = document.querySelectorAll('.framer--carousel li');
     const newCarouselItems = document.querySelectorAll('[data-framer-name="section2-stagger"]');
     console.log('carouselItems', newCarouselItems);
 
     gsap.from(newCarouselItems, {
       scrollTrigger: {
-        trigger: newCarouselItems,
+        trigger: secondSectionWrap,
         start: 'center bottom',
         end: 'bottom center'
-        // scrub: true
       },
       opacity: 0,
       y: '100px',
