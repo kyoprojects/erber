@@ -141,7 +141,7 @@ if (typeof currentUrl === 'undefined') {
 
     gsap.from(newCarouselItems, {
       scrollTrigger: {
-        trigger: '.framer--carousel',
+        trigger: '.framer-1mn2z7u-container',
         start: 'center bottom',
         end: 'bottom center'
         // scrub: true
