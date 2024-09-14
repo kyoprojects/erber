@@ -13,11 +13,11 @@
   width: 36px !important;
 }
 
-.line {
+.word {
   position: relative;
 }
 
-.line-mask {
+.word-mask {
   position: absolute;
   top: 0;
   right: 0;
