@@ -85,7 +85,7 @@ if (typeof currentUrl === 'undefined') {
     );
 
     // split text
-    let textElement = document.querySelectorAll('.primary-heading');
+    let textElement = document.querySelectorAll('.framer-jg88uz p');
 
     textElement.forEach(element => {
       let fullText;
