@@ -156,12 +156,7 @@ if (typeof currentUrl === 'undefined') {
     const processContainers = document.querySelectorAll("[data-framer-name='process-container']");
     const processContainersWrapper = document.querySelectorAll("[data-framer-name='process-container-wrapper']");
     gsap.from(processContainers, {
-      scrollTrigger: {
-        trigger: processContainersWrapper,
-        start: 'center bottom',
-        end: 'bottom center'
-        // scrub: true,
-      },
+      scrollTrigger: { trigger: processContainersWrapper, start: 'top center', end: 'bottom center' },
       opacity: 0,
       y: 50,
       stagger: 0.15,
