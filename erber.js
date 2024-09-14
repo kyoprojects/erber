@@ -84,39 +84,39 @@ if (typeof currentUrl === 'undefined') {
       false
     );
 
-    // text reveal
-    let fullText;
-    function runSplit() {
-      let textElement = document.querySelector('.framer-jg88uz p');
-      fullText = new SplitType(textElement, { types: 'lines' });
-      console.log(fullText);
+    // split text
+    let textElement = document.querySelectorAll('.primary-heading');
 
-      $('.line').append('<div class="line-mask"></div>');
-    }
-    runSplit();
-    window.addEventListener('resize', () => {
-      fullText.revert();
+    textElement.forEach(element => {
+      let fullText;
+      function runSplit() {
+        // Split the text into words within the current element
+        fullText = new SplitType(element, { types: 'words' });
+        console.log(fullText);
+
+        // Append word masks to words within the current element
+        element.querySelectorAll('.word').forEach(word => {
+          let mask = document.createElement('div');
+          mask.classList.add('word-mask');
+          word.appendChild(mask);
+        });
+      }
       runSplit();
-    });
-
-    // scroll animations
-    $('.line').each(function () {
-      let triggerElement = $(this);
-      let targetElement = triggerElement.find('.line-mask');
+      window.addEventListener('resize', () => {
+        fullText.revert();
+        runSplit();
+      });
+      let masks = element.querySelectorAll('.word-mask');
+      console.log(masks);
       let tl = gsap.timeline({
         scrollTrigger: {
-          trigger: triggerElement,
+          trigger: element,
           start: 'top bottom',
-          end: 'bottom 20%',
-          scrub: true,
-          delay: 10
+          end: 'bottom 30%',
+          scrub: true
         }
       });
-      tl.to(targetElement, {
-        width: '0%',
-        // duration: 1,
-        ease: 'power2.inOut'
-      });
+      tl.fromTo(masks, { opacity: 0.6 }, { opacity: 0, duration: 0.5, ease: 'power2.inOut', stagger: 0.05 });
     });
 
     /// image gallery slides
