@@ -150,9 +150,9 @@ if (typeof currentUrl === 'undefined') {
             markers: true
           }
         })
-        .fromTo('.framer-1ew3k9w', { y: '0' }, { y: '-40px' })
+        .fromTo('.framer-1ew3k9w', { y: '0' }, { y: '40px' })
         // .fromTo('.framer-eh6noh', { y: '0' }, { y: '-80px' }, '<')
-        .fromTo('.framer-ahrhkz', { y: '0' }, { y: '40px' }, '<');
+        .fromTo('.framer-ahrhkz', { y: '0' }, { y: '-40px' }, '<');
     });
 
     // carrousel
