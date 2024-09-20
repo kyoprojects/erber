@@ -264,65 +264,36 @@ if (typeof currentUrl === 'undefined') {
               );
           });
 
-          // mobile
-          mm.add('(max-width: 390px)', () => {
-            tl.to(menuPseudo, { duration: 0, autoAlpha: 1 })
-              .to(menuContainer, { duration: 0.0, autoAlpha: 1 })
-              .to(menuCircle, {
-                duration: 0.6,
-                width: '250vh',
-                height: '250vh',
-                autoAlpha: 1,
-                ease: 'power2.inOut'
-              })
-              .fromTo(
-                menuColumns,
-                { y: '-60px', autoAlpha: 0 },
-                {
-                  duration: 0.5,
-                  y: '0',
-                  autoAlpha: 1,
-                  stagger: 0.05,
-                  ease: 'power4.inOut'
-                },
-                '-=0.5'
-              );
-          });
+          // // mobile
+          // mm.add('(max-width: 390px)', () => {
+          //   tl.to(menuPseudo, { duration: 0, autoAlpha: 1 })
+          //     .to(menuContainer, { duration: 0.0, autoAlpha: 1 })
+          //     .to(menuCircle, {
+          //       duration: 0.6,
+          //       width: '250vh',
+          //       height: '250vh',
+          //       autoAlpha: 1,
+          //       ease: 'power2.inOut'
+          //     })
+          //     .fromTo(
+          //       menuColumns,
+          //       { y: '-60px', autoAlpha: 0 },
+          //       {
+          //         duration: 0.5,
+          //         y: '0',
+          //         autoAlpha: 1,
+          //         stagger: 0.05,
+          //         ease: 'power4.inOut'
+          //       },
+          //       '-=0.5'
+          //     );
+          // });
 
           menuOpenState = true;
         }
       });
     });
 
-    // swiper slider
-    const swiper = new Swiper('.swiper', {
-      loop: true,
-      slidesPerView: 1,
-      spaceBetween: 0,
-      allowTouchMove: true,
-      centeredSlides: true,
-      speed: 300,
-      scrollbar: { el: '.swiper-scrollbar', draggable: true },
-      // freeMode: true,
-      // slideToClickedSlide: true,
-      on: {
-        click: swiper => {
-          if (swiper.clickedIndex > swiper.activeIndex) {
-            swiper.slideNext();
-          } else {
-            swiper.slidePrev();
-          }
-        }
-      },
-      navigation: { nextEl: '.swiper-btn-next', prevEl: '.swiper-btn-prev' },
-      breakpoints: {
-        // when window width is >= 320px
-        400: {
-          slidesPerView: 3
-        }
-      }
-    });
-
-    ///
+    //
   }
 }
