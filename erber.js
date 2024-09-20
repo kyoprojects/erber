@@ -123,19 +123,36 @@ if (typeof currentUrl === 'undefined') {
     });
 
     /// image gallery slides
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: '.framer-nw2mzd',
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: 3,
-          toggleActions: 'play none none none'
-        }
-      })
-      .fromTo('.framer-1ew3k9w', { y: '0' }, { y: '-150px' })
-      .fromTo('.framer-eh6noh', { y: '0' }, { y: '-150px' }, '<')
-      .fromTo('.framer-ahrhkz', { y: '0' }, { y: '150px' }, '<');
+    mm.add('(min-width: 391px)', () => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: '.framer-nw2mzd',
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 3,
+            toggleActions: 'play none none none'
+          }
+        })
+        .fromTo('.framer-1ew3k9w', { y: '0' }, { y: '-150px' })
+        .fromTo('.framer-eh6noh', { y: '0' }, { y: '-150px' }, '<')
+        .fromTo('.framer-ahrhkz', { y: '0' }, { y: '150px' }, '<');
+    });
+    mm.add('(max-width: 390px)', () => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: '.framer-nw2mzd',
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 3,
+            toggleActions: 'play none none none'
+          }
+        })
+        .fromTo('.framer-1ew3k9w', { y: '0' }, { y: '-80px' })
+        // .fromTo('.framer-eh6noh', { y: '0' }, { y: '-80px' }, '<')
+        .fromTo('.framer-ahrhkz', { y: '0' }, { y: '80px' }, '<');
+    });
 
     // carrousel
     const secondSectionWrap = document.querySelector('[data-framer-name="second-section-wrap"]');
