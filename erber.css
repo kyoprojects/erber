@@ -13,6 +13,15 @@
   width: 36px !important;
 }
 
+/* for mobile smaller icons */
+
+@media (max-width: 390px) {
+  .framer--slideshow-controls button img {
+    height: 24px !important;
+    width: 24px !important;
+  }
+}
+
 .word {
   position: relative;
 }

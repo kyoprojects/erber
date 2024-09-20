@@ -146,8 +146,7 @@ if (typeof currentUrl === 'undefined') {
             start: 'top bottom',
             end: 'bottom top',
             scrub: 3,
-            toggleActions: 'play none none none',
-            markers: true
+            toggleActions: 'play none none none'
           }
         })
         .fromTo('.framer-1ew3k9w', { y: '0' }, { y: '-40px' })
