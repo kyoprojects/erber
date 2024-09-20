@@ -43,13 +43,14 @@ if (typeof currentUrl === 'undefined') {
     let mm = gsap.matchMedia();
 
     // lenis
-    const lenis = new Lenis();
-    function raf(time) {
-      lenis.raf(time);
+    mm.add('(min-width: 391px)', () => {
+      const lenis = new Lenis();
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
       requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
+    });
     // gsap
     gsap.registerPlugin(ScrollTrigger);
 
