@@ -40,6 +40,8 @@ if (typeof currentUrl === 'undefined') {
   }
 
   function initAnimations() {
+    let mm = gsap.matchMedia();
+
     // lenis
     const lenis = new Lenis();
     function raf(time) {
@@ -218,28 +220,57 @@ if (typeof currentUrl === 'undefined') {
           menuOpenState = false;
         } else {
           console.log('open menu');
-          tl.to(menuPseudo, { duration: 0, autoAlpha: 1 })
-            .to(menuContainer, { duration: 0.0, autoAlpha: 1 })
-            .to(menuCircle, {
-              duration: 0.6,
-              width: '250vw',
-              height: '250vw',
-              autoAlpha: 1,
-              ease: 'power2.inOut'
-            })
-            // .to(menuColumns, { duration: 0.4, autoAlpha: 1, stagger: 0.1 }); nahh i need a fromTo also moving from top to bottom
-            .fromTo(
-              menuColumns,
-              { y: '-60px', autoAlpha: 0 },
-              {
-                duration: 0.5,
-                y: '0',
+
+          // desktop
+          mm.add('(min-width: 391px)', () => {
+            tl.to(menuPseudo, { duration: 0, autoAlpha: 1 })
+              .to(menuContainer, { duration: 0.0, autoAlpha: 1 })
+              .to(menuCircle, {
+                duration: 0.6,
+                width: '250vw',
+                height: '250vw',
                 autoAlpha: 1,
-                stagger: 0.05,
-                ease: 'power4.inOut'
-              },
-              '-=0.5'
-            );
+                ease: 'power2.inOut'
+              })
+              .fromTo(
+                menuColumns,
+                { y: '-60px', autoAlpha: 0 },
+                {
+                  duration: 0.5,
+                  y: '0',
+                  autoAlpha: 1,
+                  stagger: 0.05,
+                  ease: 'power4.inOut'
+                },
+                '-=0.5'
+              );
+          });
+
+          // mobile
+          mm.add('(max-width: 390px)', () => {
+            tl.to(menuPseudo, { duration: 0, autoAlpha: 1 })
+              .to(menuContainer, { duration: 0.0, autoAlpha: 1 })
+              .to(menuCircle, {
+                duration: 0.6,
+                width: '250vh',
+                height: '250vh',
+                autoAlpha: 1,
+                ease: 'power2.inOut'
+              })
+              .fromTo(
+                menuColumns,
+                { y: '-60px', autoAlpha: 0 },
+                {
+                  duration: 0.5,
+                  y: '0',
+                  autoAlpha: 1,
+                  stagger: 0.05,
+                  ease: 'power4.inOut'
+                },
+                '-=0.5'
+              );
+          });
+
           menuOpenState = true;
         }
       });
