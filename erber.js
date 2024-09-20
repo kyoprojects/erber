@@ -167,7 +167,7 @@ if (typeof currentUrl === 'undefined') {
         end: 'bottom center'
       },
       opacity: 0,
-      y: '60px',
+      y: '20px',
       stagger: 0.15,
       duration: 0.4
     });
