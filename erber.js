@@ -105,9 +105,11 @@ if (typeof currentUrl === 'undefined') {
         });
       }
       runSplit();
-      window.addEventListener('resize', () => {
-        fullText.revert();
-        runSplit();
+      mm.add('(min-width: 391px)', () => {
+        window.addEventListener('resize', () => {
+          fullText.revert();
+          runSplit();
+        });
       });
       let masks = element.querySelectorAll('.word-mask');
       console.log(masks);
