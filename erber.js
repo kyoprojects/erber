@@ -105,10 +105,10 @@ if (typeof currentUrl === 'undefined') {
       }
       runSplit();
       mm.add('(min-width: 391px)', () => {
-        window.addEventListener('resize', () => {
-          fullText.revert();
-          runSplit();
-          console.log('resize');
+        // window.addEventListener('resize', () => {
+        //   fullText.revert();
+        //   runSplit();
+        //   console.log('resize');
         });
       });
       let masks = element.querySelectorAll('.word-mask');
@@ -118,8 +118,8 @@ if (typeof currentUrl === 'undefined') {
           trigger: element,
           start: 'top bottom',
           end: 'bottom top',
-          markers: true
-          // scrub: true
+          // markers: true
+          scrub: true
         }
       });
       tl.fromTo(masks, { opacity: 0.6 }, { opacity: 0, duration: 0.5, ease: 'power2.inOut', stagger: 0.05 });
