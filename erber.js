@@ -236,7 +236,6 @@ if (typeof currentUrl === 'undefined') {
         } else {
           // desktop
           mm.add('(min-width: 1400px)', () => {
-            console.log('desktop width: ', window.innerWidth);
             tl.to(menuPseudo, { duration: 0, autoAlpha: 1 })
               .to(menuContainer, { duration: 0.0, autoAlpha: 1 })
               .to(menuCircle, {
@@ -261,7 +260,7 @@ if (typeof currentUrl === 'undefined') {
           });
 
           // mobile
-          mm.add('(max-width: 390px)', () => {
+          mm.add('(max-width: 1399px)', () => {
             tl.to(menuPseudo, { duration: 0, autoAlpha: 1 })
               .to(menuContainer, { duration: 0.0, autoAlpha: 1 })
               .to(menuCircle, {
