@@ -86,7 +86,7 @@ if (typeof currentUrl === 'undefined') {
     );
 
     // split text
-    let textElement = document.querySelectorAll('.framer-jg88uz p');
+    let textElement = document.querySelectorAll('[data-framer-name="scroll-text-reveal"]');
 
     textElement.forEach(element => {
       let fullText;
