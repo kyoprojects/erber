@@ -31,7 +31,6 @@ if (typeof currentUrl === 'undefined') {
       loadScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js')
     ])
       .then(() => {
-        console.log('All scripts loaded');
         initAnimations();
       })
       .catch(error => {
@@ -93,7 +92,7 @@ if (typeof currentUrl === 'undefined') {
       function runSplit() {
         // Split the text into words within the current element
         fullText = new SplitType(element, { types: 'words' });
-        console.log(fullText);
+        // console.log(fullText);
 
         // Append word masks to words within the current element
         element.querySelectorAll('.word').forEach(word => {
@@ -111,7 +110,7 @@ if (typeof currentUrl === 'undefined') {
         // });
       });
       let masks = element.querySelectorAll('.word-mask');
-      console.log(masks);
+      // console.log(masks);
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: element,
@@ -159,7 +158,7 @@ if (typeof currentUrl === 'undefined') {
     const secondSectionWrap = document.querySelector('[data-framer-name="second-section-wrap"]');
     const carouselItems = document.querySelectorAll('.framer--carousel li');
     const newCarouselItems = document.querySelectorAll('[data-framer-name="section2-stagger"]');
-    console.log('carouselItems', newCarouselItems);
+    // console.log('carouselItems', newCarouselItems);
 
     gsap.from(newCarouselItems, {
       scrollTrigger: {
@@ -218,12 +217,9 @@ if (typeof currentUrl === 'undefined') {
     /// menu toggle event listener
     menuToggle.forEach(toggle => {
       toggle.addEventListener('click', () => {
-        console.log('menu clicked');
-
         const tl = gsap.timeline();
 
         if (menuOpenState) {
-          console.log('close menu');
           tl.to(menuContainer, { duration: 0.2, autoAlpha: 0 });
           tl.to(
             menuCircle,
@@ -238,10 +234,9 @@ if (typeof currentUrl === 'undefined') {
           ).to(menuPseudo, { duration: 0, autoAlpha: 0 });
           menuOpenState = false;
         } else {
-          console.log('open menu');
-
           // desktop
           mm.add('(min-width: 391px)', () => {
+            console.log('desktop wicth: ', window.innerWidth);
             tl.to(menuPseudo, { duration: 0, autoAlpha: 1 })
               .to(menuContainer, { duration: 0.0, autoAlpha: 1 })
               .to(menuCircle, {
