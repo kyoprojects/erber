@@ -117,7 +117,7 @@ if (typeof currentUrl === 'undefined') {
         scrollTrigger: {
           trigger: element,
           start: 'top bottom',
-          end: 'bottom 30%',
+          end: 'bottom top',
           markers: true
           // scrub: true
         }
