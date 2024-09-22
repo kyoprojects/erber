@@ -109,7 +109,7 @@ if (typeof currentUrl === 'undefined') {
         //   fullText.revert();
         //   runSplit();
         //   console.log('resize');
-        });
+        // });
       });
       let masks = element.querySelectorAll('.word-mask');
       console.log(masks);
