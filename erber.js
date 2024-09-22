@@ -116,8 +116,7 @@ if (typeof currentUrl === 'undefined') {
         scrollTrigger: {
           trigger: element,
           start: 'top bottom',
-          end: 'bottom top',
-          // markers: true
+          end: 'bottom 30%',
           scrub: true
         }
       });
