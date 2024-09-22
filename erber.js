@@ -117,8 +117,8 @@ if (typeof currentUrl === 'undefined') {
         scrollTrigger: {
           trigger: element,
           start: 'top bottom',
-          end: 'bottom 30%',
-          scrub: true
+          end: 'bottom 30%'
+          // scrub: true
         }
       });
       tl.fromTo(masks, { opacity: 0.6 }, { opacity: 0, duration: 0.5, ease: 'power2.inOut', stagger: 0.05 });
