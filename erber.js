@@ -102,12 +102,12 @@ if (typeof currentUrl === 'undefined') {
         });
       }
       runSplit();
-      mm.add('(min-width: 391px)', () => {
-        // window.addEventListener('resize', () => {
-        //   fullText.revert();
-        //   runSplit();
-        //   console.log('resize');
-        // });
+      mm.add('(min-width: 1400px)', () => {
+        window.addEventListener('resize', () => {
+          fullText.revert();
+          runSplit();
+          console.log('resize');
+        });
       });
       let masks = element.querySelectorAll('.word-mask');
       // console.log(masks);
@@ -235,8 +235,8 @@ if (typeof currentUrl === 'undefined') {
           menuOpenState = false;
         } else {
           // desktop
-          mm.add('(min-width: 391px)', () => {
-            console.log('desktop wicth: ', window.innerWidth);
+          mm.add('(min-width: 1400px)', () => {
+            console.log('desktop width: ', window.innerWidth);
             tl.to(menuPseudo, { duration: 0, autoAlpha: 1 })
               .to(menuContainer, { duration: 0.0, autoAlpha: 1 })
               .to(menuCircle, {
@@ -260,30 +260,30 @@ if (typeof currentUrl === 'undefined') {
               );
           });
 
-          // // mobile
-          // mm.add('(max-width: 390px)', () => {
-          //   tl.to(menuPseudo, { duration: 0, autoAlpha: 1 })
-          //     .to(menuContainer, { duration: 0.0, autoAlpha: 1 })
-          //     .to(menuCircle, {
-          //       duration: 0.6,
-          //       width: '250vh',
-          //       height: '250vh',
-          //       autoAlpha: 1,
-          //       ease: 'power2.inOut'
-          //     })
-          //     .fromTo(
-          //       menuColumns,
-          //       { y: '-60px', autoAlpha: 0 },
-          //       {
-          //         duration: 0.5,
-          //         y: '0',
-          //         autoAlpha: 1,
-          //         stagger: 0.05,
-          //         ease: 'power4.inOut'
-          //       },
-          //       '-=0.5'
-          //     );
-          // });
+          // mobile
+          mm.add('(max-width: 390px)', () => {
+            tl.to(menuPseudo, { duration: 0, autoAlpha: 1 })
+              .to(menuContainer, { duration: 0.0, autoAlpha: 1 })
+              .to(menuCircle, {
+                duration: 0.6,
+                width: '250vh',
+                height: '250vh',
+                autoAlpha: 1,
+                ease: 'power2.inOut'
+              })
+              .fromTo(
+                menuColumns,
+                { y: '-60px', autoAlpha: 0 },
+                {
+                  duration: 0.5,
+                  y: '0',
+                  autoAlpha: 1,
+                  stagger: 0.05,
+                  ease: 'power4.inOut'
+                },
+                '-=0.5'
+              );
+          });
 
           menuOpenState = true;
         }

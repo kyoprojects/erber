@@ -22,7 +22,7 @@
 
 /* for mobile smaller icons */
 
-@media (max-width: 390px) {
+@media (max-width: 1399px) {
   .framer--slideshow-controls button img {
     height: 24px !important;
     width: 24px !important;
