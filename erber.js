@@ -1,6 +1,6 @@
 if (typeof currentUrl === 'undefined') {
   let currentUrl = window.location.href;
-  const baseUrls = ['aquamarine-autonomy-753641.framer.app/', 'erber.framer.ai/'];
+  const baseUrls = ['aquamarine-autonomy-753641.framer.app/', 'erber.framer.ai/', 'erber.framer.website/', 'erberservices.nl/'];
 
   if (baseUrls.some(baseUrl => currentUrl.includes(baseUrl))) {
     function loadScript(src) {
