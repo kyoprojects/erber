@@ -154,23 +154,23 @@ if (typeof currentUrl === 'undefined') {
         .fromTo('.framer-ahrhkz', { y: '0' }, { y: '40px' }, '<');
     });
 
-    // carrousel
-    const secondSectionWrap = document.querySelector('[data-framer-name="second-section-wrap"]');
-    const carouselItems = document.querySelectorAll('.framer--carousel li');
-    const newCarouselItems = document.querySelectorAll('[data-framer-name="section2-stagger"]');
-    // console.log('carouselItems', newCarouselItems);
+    // // carrousel
+    // const secondSectionWrap = document.querySelector('[data-framer-name="second-section-wrap"]');
+    // const carouselItems = document.querySelectorAll('.framer--carousel li');
+    // const newCarouselItems = document.querySelectorAll('[data-framer-name="section2-stagger"]');
+    // // console.log('carouselItems', newCarouselItems);
 
-    gsap.from(newCarouselItems, {
-      scrollTrigger: {
-        trigger: secondSectionWrap,
-        start: 'center bottom',
-        end: 'bottom center'
-      },
-      opacity: 0,
-      y: '20px',
-      stagger: 0.15,
-      duration: 0.4
-    });
+    // gsap.from(newCarouselItems, {
+    //   scrollTrigger: {
+    //     trigger: secondSectionWrap,
+    //     start: 'center bottom',
+    //     end: 'bottom center'
+    //   },
+    //   opacity: 0,
+    //   y: '20px',
+    //   stagger: 0.15,
+    //   duration: 0.4
+    // });
 
     // process containers
     const processContainers = document.querySelectorAll("[data-framer-name='process-container']");
