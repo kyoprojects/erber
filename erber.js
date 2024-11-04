@@ -157,7 +157,7 @@ if (typeof currentUrl === 'undefined') {
     // carrousel
     const secondSectionWrap = document.querySelector('[data-framer-name="second-section-wrap"]');
     const carouselItems = document.querySelectorAll('.framer--carousel li');
-    const newCarouselItems = document.querySelectorAll('[data-framer-name="section2-staggerr"]');
+    const newCarouselItems = document.querySelectorAll('[data-framer-name="section2-stagger"]');
     // console.log('carouselItems', newCarouselItems);
 
     gsap.from(newCarouselItems, {
@@ -182,19 +182,6 @@ if (typeof currentUrl === 'undefined') {
       stagger: 0.15,
       duration: 0.4
     });
-
-    // setTimeout(() => {
-    //   const iframe = document.getElementById("iFrameResizer0");
-
-    //   const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-
-    //   const style = document.createElement("style");
-    //   style.type = "text/css";
-    //   style.innerHTML = ".wally-main-item { display: none !important; }";
-
-    //   iframeDoc.head.appendChild(style);
-    //   console.log("iframeDoc", iframeDoc);
-    // }, 3000);\
 
     // full-screen menu animation
     let menuCircle = document.querySelector('[data-framer-name="menu-circle"]');
